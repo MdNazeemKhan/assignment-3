@@ -1,76 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google font CDN -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-        <!-- Daisy Ui CDN -->
 
+    <!-- tailwind css & DaisyUI Links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- fontawesome CDN  -->
+    <!-- Font awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgba(33, 33, 33, 1)',
+                        Concept: 'rgba(231, 193, 211, 1)',
+                        Design_Process: 'rgba(239, 218, 110, 1)',
+                        Supervision: 'rgba(164, 218, 195, 1)',
+                        Budget_Planning: 'rgba(119, 170, 234, 1)',
+                        },
+                    
+                        fontFamily: {
+                            Manrope: 'Manrope',
+                    },
+                        
+                        backgroundImage: {
+                        Texture: "url('assets/bg.jpg')", 
+                    },
+                },
+            },
+        }
+    </script>
 
-    <script src="https://kit.fontawesome.com/c34fb2d63d.js" crossorigin="anonymous"></script>
-
-        <link rel="stylesheet" href="styles.css">
-            <style>
-                .font-manrope{
-                    font-family: "Manrope", sans-serif;
-                }
-            </style>
-            <!-- responsiv css -->
-             <link rel="stylesheet" href="responsiv.css">
-
-    <title>Rinterio</title>
+    <title>Document</title>
 </head>
-<body class="font-manrope">
-    <header class="bg-slate-100">
-        <div class="navbar bg-base-100 container mx-auto bg-slate-100">
-            <div class="navbar-start">
-              <a class="btn btn-ghost text-3xl font-extrabold"> <img class="arrow-icon" src="assets/arrow-up-right.png" alt=""> Rinterio</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1 text-base">
-                <li class="hover:font-semibold duration-300 easy-in-out"><a>Home</a></li>
-                <li class="hover:font-semibold duration-300 easy-in-out"><a>Services</a></li>
-                <li class="hover:font-semibold duration-300 easy-in-out"><a>Portfolio</a></li>
-                <li class="hover:font-semibold duration-300 easy-in-out"><a>Blogs</a></li>
-                <li class="hover:font-semibold duration-300 easy-in-out"><a>Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end"> 
-              <button class="btn btn-circle mr-4 border-inherit btn-none"><i class="fa-solid fa-magnifying-glass"></i> </button>
-              <button class="btn btn-circle mr-6 border-inherit btn-none"><i class="fa-solid fa-cart-shopping"></i> </button>
-               
-              <a class="btn rounded-full bg-lime-400 text-2xl font-bold px-6 btn-none">  Book Consult <img class="arrow-icon" src="assets/arrow-up-right-black.png" alt=""></a>
+<body class="font-Manrope">
+    <header class="bg-slate-50">
 
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden border-inherit btn-circle mr-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
+        <!-- nav section strat -->
+  
+  
+        <nav class="navbar w-11/12 mx-auto">
+              <div class="navbar-start flex">
+                <img class="arrow-icon mr-2" src="assets/arrow-up-right.png" alt=""> 
+                     <h3 class="text-4xl font-extrabold text-black"> Rinterio
+                     </h3>
+             </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base">
+                  <li class="hover:font-semibold duration-300 easy-in-out"><a>Home</a></li>
+                  <li class="hover:font-semibold duration-300 easy-in-out"><a>Services</a></li>
+                  <li class="hover:font-semibold duration-300 easy-in-out"><a>Portfolio</a></li>
+                  <li class="hover:font-semibold duration-300 easy-in-out"><a>Blogs</a></li>
+                  <li class="hover:font-semibold duration-300 easy-in-out"><a>Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="navbar-end"> 
+                <button class="btn btn-circle mr-4 border-inherit btn-none hidden sm:flex"><i class="fa-solid fa-magnifying-glass"></i> </button>
+                <button class="btn btn-circle mr-6 border-inherit btn-none hidden sm:flex"><i class="fa-solid fa-cart-shopping"></i> </button>      
+                <a class="btn rounded-full bg-lime-400 text-2xl font-bold px-6 btn-none hidden sm:flex">  Book Consult <img class="arrow-icon" src="assets/arrow-up-right-black.png" alt=""> </a>
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden border-inherit btn-circle mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+              </div>  
+          </nav>
+  
+                       <!-- nav section end -->
+  
+  
+  
+  
+                       <!-- hero section start -->
+  
+  
+  
+            <div class="bg-base-100 container mx-auto bg-slate-50">
+              <div class="hero-content text-center">
+                <div class="">
+                  <div> <img class="mx-auto" src="assets/banner.png" alt=""></div>
+                  <h1 class="text-6xl font-extrabold">A barn house of this design has a <br>
+                    striking appearance</h1>
+                  <p class="py-6">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, <br>and large windows that flood the space with natural light.
+                  </p>
+                  <button class="btn rounded-full bg-lime-200 text-2xl font-bold px-6 border-lime-500">View Details <img class="arrow-icon" src="assets/arrow-up-right.png" alt=""> </button>
+                </div>
               </div>
             </div>
+      </header>
+
+                  <!-- hero section end -->
+  
+
+     
+
+
+
+
+                  <!-- About Section Start -->
+
+    <main>
+        <div class="bg-raper bg-slate-200 ">
+          <div class="card lg:card-side bg-base-100  mx-auto pt-20 bg-slate-200">    
+            <div class="card-body w-full lg:w-1/2">
+                <h3 class="card-title bg-slate-100 rounded-full w-32 h-11 text-lg p-2 border mb-4"> <i class="fa-solid fa-arrow-right"></i>About Us</h3>
+                <h1 class="text-4xl font-extrabold">We design thoughtful, <br>liveable spaces</h1>
+              <p class="mt-4">The barn house captivates with its blend of rustic charm and 
+                modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                <div class="card card-side bg-base-100  h-32 mt-10 rounded-none">
+                  <figure class="ml-5">
+                    <img
+                      src="assets/commercial.png"
+                      alt="Movie" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-extrabold">Commercial</h2>
+                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                    <div class="card-actions justify-end">
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-side bg-base-100 h-32 rounded-none mt-5">
+                  <figure class="ml-5">
+                    <img
+                      src="assets/residential.png"
+                      alt="Movie" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-extrabold">Residential</h2>
+                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                    <div class="card-actions justify-end">
+                    </div>
+                  </div>
+                </div>
+              <div class="card-actions justify-end">
+              </div>
+            </div>
+            <figure class="bg-base-100 bg-slate-200 p-8"  >
+              <img class=""
+                src="assets/Rectangle.png"
+                alt="Album" />
+            </figure>
           </div>
-    </header>
-    <main> 
+        </div>
+        
 
-    </main>
-    <footer>
+                     <!-- About Section End -->
+        
 
-    </footer>
+
+
+
+        
+
+                    <!-- How we works Section Start -->
+
+
+
+
+                   <div class="bg-slate-200 ">
+
+                    <div class="min-h-screen">
+                      <div class="hero-content text-center">
+                        <div class="max-w-md">
+                          <button class="mt-10 shadow mx-auto h-9 rounded-full bg-white text-1xl font-bold px-4 border-lime-200"><i class="mr-2 fa-solid fa-arrow-right"></i>How we works</button>
+                          <h1 class="mt-10 text-5xl font-extrabold">Our Works Process</h1>
+                          <p class="py-6">
+                            The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.
+                          </p>
+                        </div> 
+                      </div>
+
+
+
+<div class=" gap-8 flex flex-col lg:flex-row items-center justify-between container px-10 mx-auto ">
+  <div class="w-full lg:w-[275px] bg-Concept pt-6 card bg-base-100 shadow-xl text-left h-[220px]">
+    <figure class="mr-auto pl-8">
+          <img
+              src="assets/concept.png"
+                  alt="Shoes"
+                      class="rounded-xl" />
+                  </figure>
+              <div class="card-body pt-4">
+            <h2 class="card-title text-xl font-extrabold leading-7  ">Concept</h2>
+          <p>Buyers and sellers can easily search for and list properties</p>
+        </div>
+    </div>
+
+    <div class="w-full lg:w-[275px] bg-Design_Process pt-6 card bg-base-100 shadow-xl text-left h-[220px]">
+      <figure class="mr-auto pl-8">
+            <img
+                src="assets/flow-chart.png"
+                    alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                <div class="card-body pt-4">
+              <h2 class="card-title text-xl font-extrabold leading-7  ">Concept</h2>
+            <p>The design process was structured and user-centric</p>
+          </div>
+      </div>
+
+      <div class="w-full lg:w-[275px] bg-Supervision pt-6 card bg-base-100 shadow-xl text-left h-[220px]">
+        <figure class="mr-auto pl-8">
+              <img
+                  src="assets/vision.png"
+                      alt="Shoes"
+                          class="rounded-xl" />
+                      </figure>
+                  <div class="card-body pt-4">
+                <h2 class="card-title text-xl font-extrabold leading-7  ">Concept</h2>
+              <p>The development process ensured high-quality output</p>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-[275px] bg-Budget_Planning pt-6 card bg-base-100 shadow-xl text-left h-[220px] ">
+          <figure class="mr-auto pl-8">
+                <img
+                    src="assets/budget-planning.png"
+                        alt="Shoes"
+                            class="rounded-xl" />
+                        </figure>
+                    <div class="card-body pt-4">
+                  <h2 class="card-title text-xl font-extrabold leading-7  ">Concept</h2>
+                <p>Budget planning covered all costs, using cost-effective</p>
+               </div>
+            </div>
+       </div>
+    </div>
+  </div>
+
+
+                    <!-- How we works Section End-->
+
+
+        
+
+     
+
+                    <!-- Form Section Start -->
+
+        
+        <div class="text-center bg-[url('assets/bg.jpg')] bg-cover bg-center  w-full">
+           <div class=" mx-auto pt-20 ">
+            <button class="shadow mx-auto h-9 rounded-full bg-lime-200 text-1xl font-bold px-4 border-lime-200"><i class="mr-2 fa-solid fa-arrow-right"></i>How we works</button>
+            <div>
+                <h1 class="text-5xl font-extrabold pt-10">Read Our Articles and News</h1>
+                <p class="pt-10 font-bold w-4/5 mx-auto">The barn house captivates with its blend of rustic charm and modern sophistication, <br>featuring weathered wood, sleek metal accents.</p>
+            </div>
+           </div>
+          <div class="lg:col-span-2 p-10 lg:w-9/12 mx-auto pt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:w-full">
+              <div>
+                <input class="shadow p-4 border-none outline-none bg-slate-100 rounded-full w-full" type="" placeholder="First Name">
+              </div>
+              <div>
+                <input class="shadow p-4 border-none outline-none bg-slate-100 rounded-full w-full" type="" placeholder="Last Name">
+              </div>
+              <div>
+                <input class="shadow p-4 border-none outline-none bg-slate-100 rounded-full w-full" type="" placeholder="Phone Number">
+              </div>
+              <div>
+                <input class=" shadow p-4 border-none outline-none bg-slate-100 rounded-full w-full" type="" placeholder="Email Number">
+              </div>
+              <div class="lg:col-span-2">
+                <textarea rows="8" class=" shadow p-4 border-none outline-none bg-slate-100 rounded-2xl w-full" name="" id="" placeholder="Write your message here"></textarea>
+              </div>    
+            </div>
+            <div class="mt-10">
+                <button class="shadow w-full mx-auto btn rounded-full bg-lime-300 text-2xl font-bold px-6 btn-none">  Book Consult <img class="arrow-icon" src="assets/arrow-up-right-black.png" alt=""></button>
+              </div>
+          </div>
+        </div>
+      </main>
+                         <!-- Form Section End -->
+
+            
+
+
+                       <!-- Footer Section Start -->
+
+
+        <footer class="footer footer-center bg-zinc-900 rounded p-10 text-base-content">  
+            <div class="flex">
+              <img class="arrow-icon" src="assets/arrow-up-right.png" alt=""> 
+                   <h3 class="text-3xl font-extrabold text-white"> Rinterio
+                   </h3>   
+           </div>
+           <p class="font-medium text-lg leading-8 text-gray-400">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
+      <nav class="grid sm:grid-flow-col lg:gap-20 gap-10 lg:font-medium font-semibold lg:text-base text-2xl text-gray-300">
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Services</a>
+        <a class="link link-hover">Portfolio</a>
+        <a class="link link-hover">Blogs</a>
+        <a class="link link-hover">Contact Us</a>
+      </nav>
+      <div class="mt-2">
+          <button class=" w-full mx-auto btn rounded-full bg-lime-300 text-2xl font-extrabold px-4 btn-none">Book Consult<img class="arrow-icon" src="assets/arrow-up-right-black.png" alt=""></button>
+        </div>
+      <aside>
+          <p class="text-gray-500">&copy; 2024 All rights reserved By Nazeem Khan.</p>
+      </aside>
+          </footer>
+
+
+                   <!-- Footer Section End -->
+
 </body>
 </html>
